@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.scd.myspa.gui.ModuloSalaController">
+     <children>
+      <BorderPane prefHeight="750.0" prefWidth="900.0" styleClass="anchor" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="58.0" prefWidth="900.0" styleClass="barra" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton layoutX="95.0" layoutY="17.0" prefHeight="26.0" prefWidth="90.0" text="Productos" AnchorPane.leftAnchor="95.0" AnchorPane.topAnchor="17.0" />
+                  <JFXButton layoutX="333.0" layoutY="17.0" prefHeight="25.0" prefWidth="88.0" text="Sucursales" AnchorPane.leftAnchor="333.0" AnchorPane.topAnchor="17.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="MAP" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="182.0" layoutY="17.0" prefHeight="25.0" prefWidth="75.0" text="Clientes" AnchorPane.leftAnchor="182.0" AnchorPane.topAnchor="17.0" />
+                  <JFXButton layoutX="251.0" layoutY="17.0" prefHeight="25.0" prefWidth="88.0" text="Empleados" AnchorPane.leftAnchor="251.0" AnchorPane.topAnchor="17.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="USER" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="535.0" layoutY="17.0" prefHeight="25.0" prefWidth="100.0" text="Tratamiento" AnchorPane.leftAnchor="535.0" AnchorPane.topAnchor="17.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="ARCHIVE" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="469.0" layoutY="17.0" prefHeight="25.0" prefWidth="77.0" text="Horarios" AnchorPane.leftAnchor="469.0" AnchorPane.topAnchor="17.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="CLOCK_ALT" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="413.0" layoutY="17.0" prefHeight="25.0" prefWidth="61.0" text="Salas" AnchorPane.leftAnchor="413.0" AnchorPane.topAnchor="17.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="BED" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="725.0" layoutY="17.0" prefHeight="25.0" prefWidth="73.0" text="Servicio" AnchorPane.leftAnchor="725.0" AnchorPane.topAnchor="17.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="BELL" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="795.0" layoutY="17.0" prefHeight="26.0" prefWidth="112.0" text="Cerrar Sesión" AnchorPane.leftAnchor="795.0" AnchorPane.topAnchor="17.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="USER_TIMES" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="629.0" layoutY="17.0" prefHeight="25.0" prefWidth="96.0" text="Reservación" AnchorPane.leftAnchor="629.0" AnchorPane.topAnchor="17.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="CALENDAR_CHECK_ALT" />
+                     </graphic>
+                  </JFXButton>
+                  <ImageView fitHeight="50.0" fitWidth="100.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="800.0" AnchorPane.topAnchor="4.0">
+                     <image>
+                        <Image url="@../../resources/logoSPA.png" />
+                     </image>
+                  </ImageView>
+                  <FontAwesomeIconView glyphName="BOOK" layoutX="95.0" layoutY="34.0" />
+                  <FontAwesomeIconView glyphName="USERS" layoutX="179.0" layoutY="34.0" />
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-position: center;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXTreeTableView fx:id="tablaSala" layoutX="413.0" prefHeight="368.0" prefWidth="477.0" styleClass="titulo2" AnchorPane.leftAnchor="413.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="60.0">
+                     <columns>
+                        <TreeTableColumn prefWidth="50.0" text="Código" />
+                        <TreeTableColumn text="Nombre" />
+                        <TreeTableColumn prefWidth="113.0" text="Descripción" />
+                        <TreeTableColumn prefWidth="112.0" text="Ruta Fotografía" />
+                        <TreeTableColumn prefWidth="65.0" text="Sucursal" />
+                        <TreeTableColumn prefWidth="55.0" text="Estatus" />
+                     </columns>
+                  </JFXTreeTableView>
+                  <Label alignment="CENTER" layoutX="441.0" layoutY="23.0" prefHeight="28.0" prefWidth="450.0" styleClass="titulo2" text="Catálogo de Salas" AnchorPane.leftAnchor="441.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="15.0">
+                     <font>
+                        <Font name="Lucida Calligraphy Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutY="15.0" prefHeight="28.0" prefWidth="450.0" styleClass="titulo2" text="Detalle de Sala">
+                     <font>
+                        <Font name="Lucida Calligraphy Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <ToggleButtonGroup layoutX="44.0" layoutY="106.0" selectionType="SINGLE" />
+                  <TextField fx:id="txtNombre" layoutX="126.0" layoutY="88.0" prefHeight="25.0" prefWidth="260.0" AnchorPane.leftAnchor="146.0" AnchorPane.topAnchor="88.0" />
+                  <TextField fx:id="txtDescripcion" layoutX="126.0" layoutY="128.0" prefHeight="25.0" prefWidth="260.0" AnchorPane.leftAnchor="146.0" AnchorPane.topAnchor="128.0" />
+                  <TextField fx:id="txtRutaFoto" layoutX="126.0" layoutY="168.0" prefHeight="25.0" prefWidth="260.0" AnchorPane.leftAnchor="146.0" AnchorPane.topAnchor="168.0" />
+                  <TextField fx:id="txtSucursal" layoutX="126.0" layoutY="208.0" prefHeight="25.0" prefWidth="260.0" AnchorPane.leftAnchor="146.0" AnchorPane.topAnchor="208.0" />
+                  <TextField fx:id="txtEstatus" layoutX="126.0" layoutY="248.0" prefHeight="25.0" prefWidth="260.0" AnchorPane.leftAnchor="146.0" AnchorPane.topAnchor="248.0" />
+                  <TextField fx:id="txtId" layoutX="126.0" layoutY="48.0" prefHeight="25.0" prefWidth="260.0" AnchorPane.leftAnchor="146.0" AnchorPane.topAnchor="48.0" />
+                  <ImageView fx:id="imgSala" fitHeight="113.0" fitWidth="135.0" layoutX="129.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="146.0">
+                     <image>
+                        <Image url="@../../resources/paris.jpg" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="btnGuardar" layoutX="118.0" layoutY="399.0" text="Guardar" textFill="#2196f3" />
+                  <JFXButton fx:id="btnEliminar" layoutX="185.0" layoutY="399.0" text="Eliminar" textFill="RED" />
+                  <JFXButton fx:id="btnNuevo" layoutX="256.0" layoutY="399.0" text="Nuevo" textFill="#169c28" />
+                  <FontAwesomeIconView fill="#2196f3" glyphName="SAVE" layoutX="112.0" layoutY="415.0" />
+                  <FontAwesomeIconView fill="RED" glyphName="TRASH" layoutX="180.0" layoutY="415.0" />
+                  <FontAwesomeIconView fill="#169c28" glyphName="EDIT" layoutX="250.0" layoutY="415.0" />
+                  <JFXButton layoutX="10.0" layoutY="47.0" styleClass="boton" text="Código de Sala" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="47.0" />
+                  <JFXButton layoutX="10.0" layoutY="167.0" styleClass="boton" text="Ruta Fotografía" />
+                  <JFXButton layoutX="124.0" layoutY="127.0" styleClass="boton" text="Descripción" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="126.0" />
+                  <JFXButton layoutX="10.0" layoutY="87.0" styleClass="boton" text="Nombre" />
+                  <JFXButton layoutX="10.0" layoutY="286.0" styleClass="boton" text="Fotografía" />
+                  <JFXButton layoutX="10.0" layoutY="247.0" styleClass="boton" text="Estatus" />
+                  <JFXButton layoutX="10.0" layoutY="207.0" styleClass="boton" text="Sucursal" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
